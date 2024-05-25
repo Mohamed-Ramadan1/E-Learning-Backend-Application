@@ -1,0 +1,163 @@
+[
+  {
+    "title": "Web Development Bootcamp",
+    "description": "Comprehensive course covering HTML, CSS, JavaScript, and more.",
+    "duration": 30,
+    "videos": [
+      {
+        "title": "Introduction to HTML",
+        "url": "https://example.com/html_intro"
+      },
+      { "title": "CSS Basics", "url": "https://example.com/css_basics" },
+      {
+        "title": "JavaScript Fundamentals",
+        "url": "https://example.com/js_fundamentals"
+      }
+    ],
+    "price": 99,
+    "instructor": "65e9ed2c9d4761ea73ea174d",
+    "category": "Web Development",
+    "photo": "webdev.jpg",
+    "learningObjectives": [
+      "Build responsive websites",
+      "Use modern web development tools"
+    ],
+    "skillLevel": "Beginner",
+    "language": "English",
+    "contentFormat": "Video lectures",
+    "createdAt": "2024-03-08T00:00:00.000Z",
+    "students": [],
+    "completionStatus": "In Progress",
+    "prerequisites": ["Basic computer skills"]
+  },
+  {
+    "title": "Machine Learning Mastery",
+    "description": "Learn machine learning algorithms and techniques from scratch.",
+    "duration": 60,
+    "videos": [
+      {
+        "title": "Introduction to Machine Learning",
+        "url": "https://example.com/ml_intro"
+      },
+      {
+        "title": "Supervised Learning",
+        "url": "https://example.com/supervised_learning"
+      },
+      {
+        "title": "Unsupervised Learning",
+        "url": "https://example.com/unsupervised_learning"
+      }
+    ],
+    "price": 149,
+    "instructor": "65e9ed2c9d4761ea73ea174d",
+    "category": "Data Science",
+    "photo": "machinelearning.jpg",
+    "learningObjectives": [
+      "Implement machine learning algorithms",
+      "Analyze real-world datasets"
+    ],
+    "skillLevel": "Intermediate",
+    "language": "English",
+    "contentFormat": "Video lectures",
+    "createdAt": "2024-03-08T00:00:00.000Z",
+    "students": [],
+    "completionStatus": "Not Started",
+    "prerequisites": ["Basic Python knowledge", "Statistics fundamentals"]
+  },
+  {
+    "title": "Photography Essentials",
+    "description": "Master the art of photography, from composition to editing.",
+    "duration": 45,
+    "videos": [
+      {
+        "title": "Understanding Camera Settings",
+        "url": "https://example.com/camera_settings"
+      },
+      {
+        "title": "Composition Techniques",
+        "url": "https://example.com/composition_techniques"
+      },
+      {
+        "title": "Introduction to Adobe Lightroom",
+        "url": "https://example.com/lightroom_intro"
+      }
+    ],
+    "price": 79,
+    "instructor": "65e9ed2c9d4761ea73ea174d",
+    "category": "Photography",
+    "photo": "photography.jpg",
+    "learningObjectives": ["Capture stunning images", "Edit photos like a pro"],
+    "skillLevel": "Beginner",
+    "language": "English",
+    "contentFormat": "Video lectures",
+    "createdAt": "2024-03-08T00:00:00.000Z",
+    "students": [],
+    "completionStatus": "Not Started",
+    "prerequisites": ["Access to a digital camera"]
+  },
+  {
+    "title": "Yoga for Beginners",
+    "description": "Discover the benefits of yoga and improve your flexibility and strength.",
+    "duration": 20,
+    "videos": [
+      {
+        "title": "Introduction to Yoga",
+        "url": "https://example.com/yoga_intro"
+      },
+      {
+        "title": "Basic Yoga Poses",
+        "url": "https://example.com/basic_yoga_poses"
+      },
+      {
+        "title": "Breathing Techniques",
+        "url": "https://example.com/breathing_techniques"
+      }
+    ],
+    "price": 49,
+    "instructor": "65e9ed2c9d4761ea73ea174d",
+    "category": "Fitness",
+    "photo": "yoga.jpg",
+    "learningObjectives": [
+      "Practice yoga poses correctly",
+      "Develop a regular yoga routine"
+    ],
+    "skillLevel": "Beginner",
+    "language": "English",
+    "contentFormat": "Video lectures",
+    "createdAt": "2024-03-08T00:00:00.000Z",
+    "students": [],
+    "completionStatus": "Not Started",
+    "prerequisites": ["None"]
+  },
+  {
+    "title": "Cooking Fundamentals",
+    "description": "Learn essential cooking techniques and recipes from around the world.",
+    "duration": 40,
+    "videos": [
+      { "title": "Knife Skills", "url": "https://example.com/knife_skills" },
+      {
+        "title": "Basic Cooking Methods",
+        "url": "https://example.com/basic_cooking_methods"
+      },
+      {
+        "title": "Italian Pasta Dishes",
+        "url": "https://example.com/italian_pasta"
+      }
+    ],
+    "price": 69,
+    "instructor": "65e9ed2c9d4761ea73ea174d",
+    "category": "Culinary Arts",
+    "photo": "cooking.jpg",
+    "learningObjectives": [
+      "Master basic cooking techniques",
+      "Prepare delicious meals"
+    ],
+    "skillLevel": "Beginner",
+    "language": "English",
+    "contentFormat": "Video lectures",
+    "createdAt": "2024-03-08T00:00:00.000Z",
+    "students": [],
+    "completionStatus": "Not Started",
+    "prerequisites": ["Basic kitchen equipment"]
+  }
+]
