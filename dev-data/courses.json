@@ -1,163 +1,862 @@
 [
   {
-    "title": "Web Development Bootcamp",
-    "description": "Comprehensive course covering HTML, CSS, JavaScript, and more.",
+    "title": "Introduction to Web Development",
+    "description": "Learn the basics of web development with HTML, CSS, and JavaScript.",
+    "duration": 40,
+    "videos": [
+      {
+        "title": "introduction",
+        "url": "https://youtu.be/X1ulCwyhCVM?si=WLAujxFeuPIogjs3"
+      },
+      {
+        "title": "first lesson",
+        "url": "https://youtu.be/89VLfs-wpEY?si=5In_MqMzq1k0M4jp"
+      },
+      {
+        "title": "Second lesson",
+        "url": "https://youtu.be/xkNpIsbxMuo?si=zJJh9lLsXkVKDjZ4"
+      },
+      {
+        "title": "thired lesson",
+        "url": "https://youtu.be/qh1QE23RQmQ?si=DXYQsWT4XBMKDVaX"
+      },
+      {
+        "title": "fourth lesson",
+        "url": "https://youtu.be/jfOfZfbNCsk?si=z7K_k40qamlySaXi"
+      }
+    ],
+    "price": 100,
+    "discount": 20,
+    "financialAid": true,
+    "paymentModel": "paid",
+    "totalReviews": 0,
+    "averageRating": 4.5,
+    "instructor": ["609c9f7743539a2f8c8b4567"],
+    "category": "web development",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/1_u6lrhj.jpg",
+    "learningObjectives": [
+      "Understand HTML",
+      "Style with CSS",
+      "Write JavaScript"
+    ],
+    "skillLevel": "beginner",
+    "language": "english"
+  },
+  {
+    "title": "Advanced Data Science",
+    "description": "Master data science techniques using Python and R.",
+    "videos": [
+      {
+        "title": "introduction",
+        "url": "https://youtu.be/X1ulCwyhCVM?si=WLAujxFeuPIogjs3"
+      },
+      {
+        "title": "first lesson",
+        "url": "https://youtu.be/89VLfs-wpEY?si=5In_MqMzq1k0M4jp"
+      },
+      {
+        "title": "Second lesson",
+        "url": "https://youtu.be/xkNpIsbxMuo?si=zJJh9lLsXkVKDjZ4"
+      },
+      {
+        "title": "thired lesson",
+        "url": "https://youtu.be/qh1QE23RQmQ?si=DXYQsWT4XBMKDVaX"
+      },
+      {
+        "title": "fourth lesson",
+        "url": "https://youtu.be/jfOfZfbNCsk?si=z7K_k40qamlySaXi"
+      }
+    ],
+    "price": 200,
+    "discount": 50,
+    "financialAid": false,
+    "paymentModel": "paid",
+    "totalReviews": 0,
+    "averageRating": 4.7,
+    "instructor": ["609c9f7743539a2f8c8b4568"],
+    "category": "data science",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/2_u6lrhj.jpg",
+    "learningObjectives": [
+      "Perform data analysis",
+      "Build predictive models",
+      "Visualize data"
+    ],
+    "skillLevel": "advanced",
+    "language": "english"
+  },
+
+  {
+    "title": "Graphic Design Fundamentals",
+    "description": "Learn the principles of graphic design and use tools like Adobe Photoshop.",
     "duration": 30,
     "videos": [
       {
-        "title": "Introduction to HTML",
-        "url": "https://example.com/html_intro"
+        "title": "introduction",
+        "url": "https://youtu.be/X1ulCwyhCVM?si=WLAujxFeuPIogjs3"
       },
-      { "title": "CSS Basics", "url": "https://example.com/css_basics" },
       {
-        "title": "JavaScript Fundamentals",
-        "url": "https://example.com/js_fundamentals"
+        "title": "first lesson",
+        "url": "https://youtu.be/89VLfs-wpEY?si=5In_MqMzq1k0M4jp"
+      },
+      {
+        "title": "Second lesson",
+        "url": "https://youtu.be/xkNpIsbxMuo?si=zJJh9lLsXkVKDjZ4"
+      },
+      {
+        "title": "thired lesson",
+        "url": "https://youtu.be/qh1QE23RQmQ?si=DXYQsWT4XBMKDVaX"
+      },
+      {
+        "title": "fourth lesson",
+        "url": "https://youtu.be/jfOfZfbNCsk?si=z7K_k40qamlySaXi"
       }
     ],
-    "price": 99,
-    "instructor": "65e9ed2c9d4761ea73ea174d",
-    "category": "Web Development",
-    "photo": "webdev.jpg",
+    "price": 80,
+    "discount": 10,
+    "financialAid": true,
+    "paymentModel": "paid",
+    "totalReviews": 0,
+    "averageRating": 4.3,
+    "instructor": ["609c9f7743539a2f8c8b4569"],
+    "category": "graphic design",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/3_u6lrhj.jpg",
     "learningObjectives": [
-      "Build responsive websites",
-      "Use modern web development tools"
+      "Understand design principles",
+      "Use Adobe Photoshop",
+      "Create stunning visuals"
     ],
-    "skillLevel": "Beginner",
-    "language": "English",
-    "contentFormat": "Video lectures",
-    "createdAt": "2024-03-08T00:00:00.000Z",
-    "students": [],
-    "completionStatus": "In Progress",
-    "prerequisites": ["Basic computer skills"]
+    "skillLevel": "beginner",
+    "language": "english"
   },
   {
-    "title": "Machine Learning Mastery",
-    "description": "Learn machine learning algorithms and techniques from scratch.",
-    "duration": 60,
+    "title": "Mobile App Development with Flutter",
+    "description": "Build beautiful and performant mobile applications using Flutter.",
+    "duration": 50,
     "videos": [
       {
-        "title": "Introduction to Machine Learning",
-        "url": "https://example.com/ml_intro"
+        "title": "introduction",
+        "url": "https://youtu.be/X1ulCwyhCVM?si=WLAujxFeuPIogjs3"
       },
       {
-        "title": "Supervised Learning",
-        "url": "https://example.com/supervised_learning"
+        "title": "first lesson",
+        "url": "https://youtu.be/89VLfs-wpEY?si=5In_MqMzq1k0M4jp"
       },
       {
-        "title": "Unsupervised Learning",
-        "url": "https://example.com/unsupervised_learning"
+        "title": "Second lesson",
+        "url": "https://youtu.be/xkNpIsbxMuo?si=zJJh9lLsXkVKDjZ4"
+      },
+      {
+        "title": "thired lesson",
+        "url": "https://youtu.be/qh1QE23RQmQ?si=DXYQsWT4XBMKDVaX"
+      },
+      {
+        "title": "fourth lesson",
+        "url": "https://youtu.be/jfOfZfbNCsk?si=z7K_k40qamlySaXi"
       }
     ],
-    "price": 149,
-    "instructor": "65e9ed2c9d4761ea73ea174d",
-    "category": "Data Science",
-    "photo": "machinelearning.jpg",
+    "price": 150,
+    "discount": 30,
+    "financialAid": false,
+    "paymentModel": "paid",
+    "totalReviews": 0,
+    "averageRating": 4.6,
+    "instructor": ["609c9f7743539a2f8c8b4570"],
+    "category": "mobile development",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/4_u6lrhj.jpg",
     "learningObjectives": [
-      "Implement machine learning algorithms",
-      "Analyze real-world datasets"
+      "Build mobile apps",
+      "Understand Flutter framework",
+      "Deploy to app stores"
     ],
-    "skillLevel": "Intermediate",
-    "language": "English",
-    "contentFormat": "Video lectures",
-    "createdAt": "2024-03-08T00:00:00.000Z",
-    "students": [],
-    "completionStatus": "Not Started",
-    "prerequisites": ["Basic Python knowledge", "Statistics fundamentals"]
+    "skillLevel": "intermediate",
+    "language": "english"
   },
   {
-    "title": "Photography Essentials",
-    "description": "Master the art of photography, from composition to editing.",
+    "title": "Digital Marketing Strategies",
+    "description": "Learn effective digital marketing strategies to grow your business.",
+    "duration": 35,
+    "videos": [
+      {
+        "title": "introduction",
+        "url": "https://youtu.be/X1ulCwyhCVM?si=WLAujxFeuPIogjs3"
+      },
+      {
+        "title": "first lesson",
+        "url": "https://youtu.be/89VLfs-wpEY?si=5In_MqMzq1k0M4jp"
+      },
+      {
+        "title": "Second lesson",
+        "url": "https://youtu.be/xkNpIsbxMuo?si=zJJh9lLsXkVKDjZ4"
+      },
+      {
+        "title": "thired lesson",
+        "url": "https://youtu.be/qh1QE23RQmQ?si=DXYQsWT4XBMKDVaX"
+      },
+      {
+        "title": "fourth lesson",
+        "url": "https://youtu.be/jfOfZfbNCsk?si=z7K_k40qamlySaXi"
+      }
+    ],
+    "price": 120,
+    "discount": 25,
+    "financialAid": true,
+    "paymentModel": "paid",
+    "totalReviews": 0,
+    "averageRating": 4.4,
+    "instructor": ["609c9f7743539a2f8c8b4571"],
+    "category": "marketing",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/5_u6lrhj.jpg",
+    "learningObjectives": [
+      "Understand digital marketing",
+      "Implement SEO strategies",
+      "Analyze marketing data"
+    ],
+    "skillLevel": "beginner",
+    "language": "english"
+  },
+  {
+    "title": "Project Management Essentials",
+    "description": "Master the fundamentals of project management.",
     "duration": 45,
     "videos": [
       {
-        "title": "Understanding Camera Settings",
-        "url": "https://example.com/camera_settings"
+        "title": "introduction",
+        "url": "https://youtu.be/X1ulCwyhCVM?si=WLAujxFeuPIogjs3"
       },
       {
-        "title": "Composition Techniques",
-        "url": "https://example.com/composition_techniques"
+        "title": "first lesson",
+        "url": "https://youtu.be/89VLfs-wpEY?si=5In_MqMzq1k0M4jp"
       },
       {
-        "title": "Introduction to Adobe Lightroom",
-        "url": "https://example.com/lightroom_intro"
+        "title": "Second lesson",
+        "url": "https://youtu.be/xkNpIsbxMuo?si=zJJh9lLsXkVKDjZ4"
+      },
+      {
+        "title": "thired lesson",
+        "url": "https://youtu.be/qh1QE23RQmQ?si=DXYQsWT4XBMKDVaX"
+      },
+      {
+        "title": "fourth lesson",
+        "url": "https://youtu.be/jfOfZfbNCsk?si=z7K_k40qamlySaXi"
       }
     ],
-    "price": 79,
-    "instructor": "65e9ed2c9d4761ea73ea174d",
-    "category": "Photography",
-    "photo": "photography.jpg",
-    "learningObjectives": ["Capture stunning images", "Edit photos like a pro"],
-    "skillLevel": "Beginner",
-    "language": "English",
-    "contentFormat": "Video lectures",
-    "createdAt": "2024-03-08T00:00:00.000Z",
-    "students": [],
-    "completionStatus": "Not Started",
-    "prerequisites": ["Access to a digital camera"]
+    "price": 130,
+    "discount": 15,
+    "financialAid": true,
+    "paymentModel": "paid",
+    "totalReviews": 0,
+    "averageRating": 4.8,
+    "instructor": ["609c9f7743539a2f8c8b4572"],
+    "category": "project management",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/6_u6lrhj.jpg",
+    "learningObjectives": [
+      "Plan projects",
+      "Manage resources",
+      "Track project progress"
+    ],
+    "skillLevel": "intermediate",
+    "language": "spanish"
   },
   {
-    "title": "Yoga for Beginners",
-    "description": "Discover the benefits of yoga and improve your flexibility and strength.",
+    "title": "Accounting for Beginners",
+    "description": "Learn the basics of accounting and financial management.",
+    "duration": 25,
+    "videos": [
+      {
+        "title": "introduction",
+        "url": "https://youtu.be/X1ulCwyhCVM?si=WLAujxFeuPIogjs3"
+      },
+      {
+        "title": "first lesson",
+        "url": "https://youtu.be/89VLfs-wpEY?si=5In_MqMzq1k0M4jp"
+      },
+      {
+        "title": "Second lesson",
+        "url": "https://youtu.be/xkNpIsbxMuo?si=zJJh9lLsXkVKDjZ4"
+      },
+      {
+        "title": "thired lesson",
+        "url": "https://youtu.be/qh1QE23RQmQ?si=DXYQsWT4XBMKDVaX"
+      },
+      {
+        "title": "fourth lesson",
+        "url": "https://youtu.be/jfOfZfbNCsk?si=z7K_k40qamlySaXi"
+      }
+    ],
+    "price": 90,
+    "discount": 5,
+    "financialAid": true,
+    "paymentModel": "paid",
+    "totalReviews": 0,
+    "averageRating": 4.2,
+    "instructor": ["609c9f7743539a2f8c8b4573"],
+    "category": "accounting",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/7_u6lrhj.jpg",
+    "learningObjectives": [
+      "Understand accounting principles",
+      "Prepare financial statements",
+      "Analyze financial data"
+    ],
+    "skillLevel": "beginner",
+    "language": "french"
+  },
+  {
+    "title": "Human Resources Management",
+    "description": "Develop effective HR management skills.",
+    "duration": 50,
+    "videos": [
+      {
+        "title": "introduction",
+        "url": "https://youtu.be/X1ulCwyhCVM?si=WLAujxFeuPIogjs3"
+      },
+      {
+        "title": "first lesson",
+        "url": "https://youtu.be/89VLfs-wpEY?si=5In_MqMzq1k0M4jp"
+      },
+      {
+        "title": "Second lesson",
+        "url": "https://youtu.be/xkNpIsbxMuo?si=zJJh9lLsXkVKDjZ4"
+      },
+      {
+        "title": "thired lesson",
+        "url": "https://youtu.be/qh1QE23RQmQ?si=DXYQsWT4XBMKDVaX"
+      },
+      {
+        "title": "fourth lesson",
+        "url": "https://youtu.be/jfOfZfbNCsk?si=z7K_k40qamlySaXi"
+      }
+    ],
+    "price": 140,
+    "discount": 20,
+    "financialAid": false,
+    "paymentModel": "paid",
+    "totalReviews": 0,
+    "averageRating": 4.6,
+    "instructor": ["609c9f7743539a2f8c8b4574"],
+    "category": "human resources",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/8_u6lrhj.jpg",
+    "learningObjectives": [
+      "Manage HR functions",
+      "Develop recruitment strategies",
+      "Implement performance management"
+    ],
+    "skillLevel": "intermediate",
+    "language": "german"
+  },
+  {
+    "title": "Sales Techniques and Strategies",
+    "description": "Learn effective sales techniques to boost your career.",
+    "duration": 35,
+    "videos": [
+      {
+        "title": "introduction",
+        "url": "https://youtu.be/X1ulCwyhCVM?si=WLAujxFeuPIogjs3"
+      },
+      {
+        "title": "first lesson",
+        "url": "https://youtu.be/89VLfs-wpEY?si=5In_MqMzq1k0M4jp"
+      },
+      {
+        "title": "Second lesson",
+        "url": "https://youtu.be/xkNpIsbxMuo?si=zJJh9lLsXkVKDjZ4"
+      },
+      {
+        "title": "thired lesson",
+        "url": "https://youtu.be/qh1QE23RQmQ?si=DXYQsWT4XBMKDVaX"
+      },
+      {
+        "title": "fourth lesson",
+        "url": "https://youtu.be/jfOfZfbNCsk?si=z7K_k40qamlySaXi"
+      }
+    ],
+    "price": 110,
+    "discount": 10,
+    "financialAid": false,
+    "paymentModel": "paid",
+    "totalReviews": 0,
+    "averageRating": 4.4,
+    "instructor": ["609c9f7743539a2f8c8b4575"],
+    "category": "sales",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/9_u6lrhj.jpg",
+    "learningObjectives": [
+      "Understand sales process",
+      "Develop sales strategies",
+      "Improve communication skills"
+    ],
+    "skillLevel": "beginner",
+    "language": "hindi"
+  },
+  {
+    "title": "Operations Management",
+    "description": "Optimize business operations and processes.",
+    "duration": 40,
+    "videos": [
+      {
+        "title": "introduction",
+        "url": "https://youtu.be/X1ulCwyhCVM?si=WLAujxFeuPIogjs3"
+      },
+      {
+        "title": "first lesson",
+        "url": "https://youtu.be/89VLfs-wpEY?si=5In_MqMzq1k0M4jp"
+      },
+      {
+        "title": "Second lesson",
+        "url": "https://youtu.be/xkNpIsbxMuo?si=zJJh9lLsXkVKDjZ4"
+      },
+      {
+        "title": "thired lesson",
+        "url": "https://youtu.be/qh1QE23RQmQ?si=DXYQsWT4XBMKDVaX"
+      },
+      {
+        "title": "fourth lesson",
+        "url": "https://youtu.be/jfOfZfbNCsk?si=z7K_k40qamlySaXi"
+      }
+    ],
+    "price": 150,
+    "discount": 25,
+    "financialAid": true,
+    "paymentModel": "paid",
+    "totalReviews": 0,
+    "averageRating": 4.7,
+    "instructor": ["609c9f7743539a2f8c8b4576"],
+    "category": "operations",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/10_u6lrhj.jpg",
+    "learningObjectives": [
+      "Manage operations",
+      "Improve processes",
+      "Optimize resources"
+    ],
+    "skillLevel": "advanced",
+    "language": "russian"
+  },
+  {
+    "title": "Cybersecurity Fundamentals",
+    "description": "Learn the basics of cybersecurity and how to protect systems from attacks.",
+    "duration": 30,
+    "videos": [
+      {
+        "title": "introduction",
+        "url": "https://youtu.be/X1ulCwyhCVM?si=WLAujxFeuPIogjs3"
+      },
+      {
+        "title": "first lesson",
+        "url": "https://youtu.be/89VLfs-wpEY?si=5In_MqMzq1k0M4jp"
+      },
+      {
+        "title": "Second lesson",
+        "url": "https://youtu.be/xkNpIsbxMuo?si=zJJh9lLsXkVKDjZ4"
+      },
+      {
+        "title": "thired lesson",
+        "url": "https://youtu.be/qh1QE23RQmQ?si=DXYQsWT4XBMKDVaX"
+      },
+      {
+        "title": "fourth lesson",
+        "url": "https://youtu.be/jfOfZfbNCsk?si=z7K_k40qamlySaXi"
+      }
+    ],
+    "price": 120,
+    "discount": 20,
+    "financialAid": true,
+    "paymentModel": "paid",
+    "totalReviews": 0,
+    "averageRating": 4.5,
+    "instructor": ["609c9f7743539a2f8c8b4577"],
+    "category": "security",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/11_u6lrhj.jpg",
+    "learningObjectives": [
+      "Understand cybersecurity principles",
+      "Identify types of attacks",
+      "Protect systems and data"
+    ],
+    "skillLevel": "beginner",
+    "language": "english"
+  },
+  {
+    "title": "Advanced Python Programming",
+    "description": "Enhance your Python programming skills with advanced concepts and techniques.",
+    "duration": 50,
+    "videos": [
+      {
+        "title": "introduction",
+        "url": "https://youtu.be/X1ulCwyhCVM?si=WLAujxFeuPIogjs3"
+      },
+      {
+        "title": "first lesson",
+        "url": "https://youtu.be/89VLfs-wpEY?si=5In_MqMzq1k0M4jp"
+      },
+      {
+        "title": "Second lesson",
+        "url": "https://youtu.be/xkNpIsbxMuo?si=zJJh9lLsXkVKDjZ4"
+      },
+      {
+        "title": "thired lesson",
+        "url": "https://youtu.be/qh1QE23RQmQ?si=DXYQsWT4XBMKDVaX"
+      },
+      {
+        "title": "fourth lesson",
+        "url": "https://youtu.be/jfOfZfbNCsk?si=z7K_k40qamlySaXi"
+      }
+    ],
+    "price": 180,
+    "discount": 30,
+    "financialAid": false,
+    "paymentModel": "paid",
+    "totalReviews": 0,
+    "averageRating": 4.6,
+    "instructor": ["609c9f7743539a2f8c8b4578"],
+    "category": "programming",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/12_u6lrhj.jpg",
+    "learningObjectives": [
+      "Master advanced Python",
+      "Use Python for data science",
+      "Implement efficient algorithms"
+    ],
+    "skillLevel": "advanced",
+    "language": "english"
+  },
+  {
+    "title": "French for Beginners",
+    "description": "Learn the basics of French language and start communicating effectively.",
     "duration": 20,
     "videos": [
       {
-        "title": "Introduction to Yoga",
-        "url": "https://example.com/yoga_intro"
+        "title": "introduction",
+        "url": "https://youtu.be/X1ulCwyhCVM?si=WLAujxFeuPIogjs3"
       },
       {
-        "title": "Basic Yoga Poses",
-        "url": "https://example.com/basic_yoga_poses"
+        "title": "first lesson",
+        "url": "https://youtu.be/89VLfs-wpEY?si=5In_MqMzq1k0M4jp"
       },
       {
-        "title": "Breathing Techniques",
-        "url": "https://example.com/breathing_techniques"
+        "title": "Second lesson",
+        "url": "https://youtu.be/xkNpIsbxMuo?si=zJJh9lLsXkVKDjZ4"
+      },
+      {
+        "title": "thired lesson",
+        "url": "https://youtu.be/qh1QE23RQmQ?si=DXYQsWT4XBMKDVaX"
+      },
+      {
+        "title": "fourth lesson",
+        "url": "https://youtu.be/jfOfZfbNCsk?si=z7K_k40qamlySaXi"
       }
     ],
-    "price": 49,
-    "instructor": "65e9ed2c9d4761ea73ea174d",
-    "category": "Fitness",
-    "photo": "yoga.jpg",
+    "price": 70,
+    "discount": 10,
+    "financialAid": true,
+    "paymentModel": "paid",
+    "totalReviews": 0,
+    "averageRating": 4.3,
+    "instructor": ["609c9f7743539a2f8c8b4579"],
+    "category": "languages",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/13_u6lrhj.jpg",
     "learningObjectives": [
-      "Practice yoga poses correctly",
-      "Develop a regular yoga routine"
+      "Understand basic French",
+      "Use common phrases",
+      "Improve pronunciation"
     ],
-    "skillLevel": "Beginner",
-    "language": "English",
-    "contentFormat": "Video lectures",
-    "createdAt": "2024-03-08T00:00:00.000Z",
-    "students": [],
-    "completionStatus": "Not Started",
-    "prerequisites": ["None"]
+    "skillLevel": "beginner",
+    "language": "french"
   },
   {
-    "title": "Cooking Fundamentals",
-    "description": "Learn essential cooking techniques and recipes from around the world.",
-    "duration": 40,
+    "title": "Creative Writing Workshop",
+    "description": "Enhance your creative writing skills and learn to write compelling stories.",
+    "duration": 35,
     "videos": [
-      { "title": "Knife Skills", "url": "https://example.com/knife_skills" },
       {
-        "title": "Basic Cooking Methods",
-        "url": "https://example.com/basic_cooking_methods"
+        "title": "introduction",
+        "url": "https://youtu.be/X1ulCwyhCVM?si=WLAujxFeuPIogjs3"
       },
       {
-        "title": "Italian Pasta Dishes",
-        "url": "https://example.com/italian_pasta"
+        "title": "first lesson",
+        "url": "https://youtu.be/89VLfs-wpEY?si=5In_MqMzq1k0M4jp"
+      },
+      {
+        "title": "Second lesson",
+        "url": "https://youtu.be/xkNpIsbxMuo?si=zJJh9lLsXkVKDjZ4"
+      },
+      {
+        "title": "thired lesson",
+        "url": "https://youtu.be/qh1QE23RQmQ?si=DXYQsWT4XBMKDVaX"
+      },
+      {
+        "title": "fourth lesson",
+        "url": "https://youtu.be/jfOfZfbNCsk?si=z7K_k40qamlySaXi"
       }
     ],
-    "price": 69,
-    "instructor": "65e9ed2c9d4761ea73ea174d",
-    "category": "Culinary Arts",
-    "photo": "cooking.jpg",
+    "price": 100,
+    "discount": 15,
+    "financialAid": false,
+    "paymentModel": "paid",
+    "totalReviews": 0,
+    "averageRating": 4.7,
+    "instructor": ["609c9f7743539a2f8c8b4580"],
+    "category": "writing",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/14_u6lrhj.jpg",
     "learningObjectives": [
-      "Master basic cooking techniques",
-      "Prepare delicious meals"
+      "Develop writing skills",
+      "Create compelling characters",
+      "Write engaging stories"
     ],
-    "skillLevel": "Beginner",
-    "language": "English",
-    "contentFormat": "Video lectures",
-    "createdAt": "2024-03-08T00:00:00.000Z",
-    "students": [],
-    "completionStatus": "Not Started",
-    "prerequisites": ["Basic kitchen equipment"]
+    "skillLevel": "intermediate",
+    "language": "english"
+  },
+  {
+    "title": "Introduction to Machine Learning",
+    "description": "Learn the fundamentals of machine learning and build your first models.",
+    "duration": 40,
+    "videos": [
+      {
+        "title": "introduction",
+        "url": "https://youtu.be/X1ulCwyhCVM?si=WLAujxFeuPIogjs3"
+      },
+      {
+        "title": "first lesson",
+        "url": "https://youtu.be/89VLfs-wpEY?si=5In_MqMzq1k0M4jp"
+      },
+      {
+        "title": "Second lesson",
+        "url": "https://youtu.be/xkNpIsbxMuo?si=zJJh9lLsXkVKDjZ4"
+      },
+      {
+        "title": "thired lesson",
+        "url": "https://youtu.be/qh1QE23RQmQ?si=DXYQsWT4XBMKDVaX"
+      },
+      {
+        "title": "fourth lesson",
+        "url": "https://youtu.be/jfOfZfbNCsk?si=z7K_k40qamlySaXi"
+      }
+    ],
+    "price": 150,
+    "discount": 25,
+    "financialAid": true,
+    "paymentModel": "paid",
+    "totalReviews": 0,
+    "averageRating": 4.8,
+    "instructor": ["609c9f7743539a2f8c8b4581"],
+    "category": "data science",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/15_u6lrhj.jpg",
+    "learningObjectives": [
+      "Understand machine learning",
+      "Build and evaluate models",
+      "Use ML tools and frameworks"
+    ],
+    "skillLevel": "intermediate",
+    "language": "english"
+  },
+  {
+    "title": "Introduction to Blockchain",
+    "description": "Understand the fundamentals of blockchain technology and its applications.",
+    "duration": 45,
+    "videos": [
+      {
+        "title": "introduction",
+        "url": "https://youtu.be/X1ulCwyhCVM?si=WLAujxFeuPIogjs3"
+      },
+      {
+        "title": "first lesson",
+        "url": "https://youtu.be/89VLfs-wpEY?si=5In_MqMzq1k0M4jp"
+      },
+      {
+        "title": "Second lesson",
+        "url": "https://youtu.be/xkNpIsbxMuo?si=zJJh9lLsXkVKDjZ4"
+      },
+      {
+        "title": "thired lesson",
+        "url": "https://youtu.be/qh1QE23RQmQ?si=DXYQsWT4XBMKDVaX"
+      },
+      {
+        "title": "fourth lesson",
+        "url": "https://youtu.be/jfOfZfbNCsk?si=z7K_k40qamlySaXi"
+      }
+    ],
+    "price": 160,
+    "discount": 20,
+    "financialAid": true,
+    "paymentModel": "paid",
+    "totalReviews": 0,
+    "averageRating": 4.6,
+    "instructor": ["609c9f7743539a2f8c8b4582"],
+    "category": "technology",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/16_u6lrhj.jpg",
+    "learningObjectives": [
+      "Understand blockchain basics",
+      "Explore blockchain applications",
+      "Learn about smart contracts"
+    ],
+    "skillLevel": "beginner",
+    "language": "english"
+  },
+  {
+    "title": "Effective Communication Skills",
+    "description": "Develop your communication skills to enhance your personal and professional relationships.",
+    "duration": 25,
+    "videos": [
+      {
+        "title": "introduction",
+        "url": "https://youtu.be/X1ulCwyhCVM?si=WLAujxFeuPIogjs3"
+      },
+      {
+        "title": "first lesson",
+        "url": "https://youtu.be/89VLfs-wpEY?si=5In_MqMzq1k0M4jp"
+      },
+      {
+        "title": "Second lesson",
+        "url": "https://youtu.be/xkNpIsbxMuo?si=zJJh9lLsXkVKDjZ4"
+      },
+      {
+        "title": "thired lesson",
+        "url": "https://youtu.be/qh1QE23RQmQ?si=DXYQsWT4XBMKDVaX"
+      },
+      {
+        "title": "fourth lesson",
+        "url": "https://youtu.be/jfOfZfbNCsk?si=z7K_k40qamlySaXi"
+      }
+    ],
+    "price": 100,
+    "discount": 15,
+    "financialAid": true,
+    "paymentModel": "paid",
+    "totalReviews": 0,
+    "averageRating": 4.4,
+    "instructor": ["609c9f7743539a2f8c8b4583"],
+    "category": "personal development",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/17_u6lrhj.jpg",
+    "learningObjectives": [
+      "Enhance communication skills",
+      "Practice active listening",
+      "Improve public speaking"
+    ],
+    "skillLevel": "beginner",
+    "language": "english"
+  },
+  {
+    "title": "UI/UX Design Principles",
+    "description": "Learn the principles of user interface and user experience design.",
+    "duration": 30,
+    "videos": [
+      {
+        "title": "introduction",
+        "url": "https://youtu.be/X1ulCwyhCVM?si=WLAujxFeuPIogjs3"
+      },
+      {
+        "title": "first lesson",
+        "url": "https://youtu.be/89VLfs-wpEY?si=5In_MqMzq1k0M4jp"
+      },
+      {
+        "title": "Second lesson",
+        "url": "https://youtu.be/xkNpIsbxMuo?si=zJJh9lLsXkVKDjZ4"
+      },
+      {
+        "title": "thired lesson",
+        "url": "https://youtu.be/qh1QE23RQmQ?si=DXYQsWT4XBMKDVaX"
+      },
+      {
+        "title": "fourth lesson",
+        "url": "https://youtu.be/jfOfZfbNCsk?si=z7K_k40qamlySaXi"
+      }
+    ],
+    "price": 120,
+    "discount": 10,
+    "financialAid": false,
+    "paymentModel": "paid",
+    "totalReviews": 0,
+    "averageRating": 4.5,
+    "instructor": ["609c9f7743539a2f8c8b4584"],
+    "category": "ui/ux design",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/18_u6lrhj.jpg",
+    "learningObjectives": [
+      "Understand UI/UX principles",
+      "Design effective interfaces",
+      "Create user-centric designs"
+    ],
+    "skillLevel": "intermediate",
+    "language": "english"
+  },
+  {
+    "title": "Introduction to Quantum Computing",
+    "description": "Get started with quantum computing and understand its potential.",
+    "duration": 40,
+    "videos": [
+      {
+        "title": "introduction",
+        "url": "https://youtu.be/X1ulCwyhCVM?si=WLAujxFeuPIogjs3"
+      },
+      {
+        "title": "first lesson",
+        "url": "https://youtu.be/89VLfs-wpEY?si=5In_MqMzq1k0M4jp"
+      },
+      {
+        "title": "Second lesson",
+        "url": "https://youtu.be/xkNpIsbxMuo?si=zJJh9lLsXkVKDjZ4"
+      },
+      {
+        "title": "thired lesson",
+        "url": "https://youtu.be/qh1QE23RQmQ?si=DXYQsWT4XBMKDVaX"
+      },
+      {
+        "title": "fourth lesson",
+        "url": "https://youtu.be/jfOfZfbNCsk?si=z7K_k40qamlySaXi"
+      }
+    ],
+    "price": 200,
+    "discount": 30,
+    "financialAid": true,
+    "paymentModel": "paid",
+    "totalReviews": 0,
+    "averageRating": 4.7,
+    "instructor": ["609c9f7743539a2f8c8b4585"],
+    "category": "technology",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/19_u6lrhj.jpg",
+    "learningObjectives": [
+      "Learn quantum basics",
+      "Explore quantum algorithms",
+      "Understand quantum applications"
+    ],
+    "skillLevel": "advanced",
+    "language": "english"
+  },
+  {
+    "title": "Digital Photography for Beginners",
+    "description": "Master the basics of digital photography and improve your photo-taking skills.",
+    "duration": 20,
+    "videos": [
+      {
+        "title": "introduction",
+        "url": "https://youtu.be/X1ulCwyhCVM?si=WLAujxFeuPIogjs3"
+      },
+      {
+        "title": "first lesson",
+        "url": "https://youtu.be/89VLfs-wpEY?si=5In_MqMzq1k0M4jp"
+      },
+      {
+        "title": "Second lesson",
+        "url": "https://youtu.be/xkNpIsbxMuo?si=zJJh9lLsXkVKDjZ4"
+      },
+      {
+        "title": "thired lesson",
+        "url": "https://youtu.be/qh1QE23RQmQ?si=DXYQsWT4XBMKDVaX"
+      },
+      {
+        "title": "fourth lesson",
+        "url": "https://youtu.be/jfOfZfbNCsk?si=z7K_k40qamlySaXi"
+      }
+    ],
+    "price": 80,
+    "discount": 5,
+    "financialAid": false,
+    "paymentModel": "paid",
+    "totalReviews": 0,
+    "averageRating": 4.3,
+    "instructor": ["609c9f7743539a2f8c8b4586"],
+    "category": "photography",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/20_u6lrhj.jpg",
+    "learningObjectives": [
+      "Understand photography basics",
+      "Learn camera settings",
+      "Improve photo composition"
+    ],
+    "skillLevel": "beginner",
+    "language": "english"
   }
 ]

@@ -4,6 +4,7 @@ import APIFeatures from '../utils/apiKeyFeatures.js';
 import Enroll from '../models/courseEnrollModel.js';
 import User from '../models/userModel.js';
 import Course from '../models/coursesModel.js';
+import FinancialAidRequests from '../models/financialAidMode.js';
 
 import { deleteOne } from './factoryHandler.js';
 
@@ -24,6 +25,12 @@ export const enrollOnCourse = catchAsync(async (req, res, next) => {
   if (previousEnrollments) {
     return next(new AppError('User already enroll on this course', 400));
   }
+
+  // if applay to financial aid delete the request
+  await FinancialAidRequests.findOneAndDelete({
+    course: courseId,
+    user: userId,
+  });
 
   const enrollObj = {
     course: course._id,
