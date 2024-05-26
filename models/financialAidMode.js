@@ -45,7 +45,7 @@ const financialAidSchema = new mongoose.Schema(
 financialAidSchema.pre(/^find/, function (next) {
   this.populate({
     path: 'course',
-    select: 'title description instructor',
+    select: 'title description instructor category photo duration price',
   }).populate({ path: 'user', select: 'name email' });
   next();
 });

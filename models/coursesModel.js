@@ -62,6 +62,35 @@ const courseSchema = new mongoose.Schema(
     category: {
       type: String,
       required: [true, 'Please provide a category'],
+      enum: [
+        'web development',
+        'web design',
+        'graphic design',
+        'mobile development',
+        'app development',
+        'game development',
+        'ui/ux design',
+        'data science',
+        'data analytics',
+        'data visualization',
+        'data engineering',
+        'data science',
+        'data analysis',
+        'data analytics',
+        'data visualization',
+        'data engineering',
+        'marketing',
+        'business',
+        'finance',
+        'accounting',
+        'marketing',
+        'sales',
+        'human resources',
+        'operations',
+        'project management',
+        'finance',
+        'accounting',
+      ],
     },
     photo: {
       type: String,
@@ -71,8 +100,25 @@ const courseSchema = new mongoose.Schema(
     photoPublicId: String,
 
     learningObjectives: [String],
-    skillLevel: String,
-    language: String,
+    skillLevel: {
+      type: String,
+      enum: ['beginner', 'intermediate', 'advanced'],
+      required: [true, 'Please provide a skill level'],
+    },
+    language: {
+      type: String,
+      required: [true, 'Please provide a language'],
+      default: 'english',
+      enum: [
+        'english',
+        'arabic',
+        'french',
+        'german',
+        'hindi',
+        'spanish',
+        'russian',
+      ],
+    },
     contentFormat: String, // Optional
     completionStatus: String, // Optional, for tracking student progress
     prerequisites: [String], // Optional

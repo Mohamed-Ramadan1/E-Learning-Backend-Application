@@ -98,4 +98,3 @@ export const deleteCourse = catchAsync(async (req, res, next) => {
     data: null,
   });
 });
-
