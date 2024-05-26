@@ -35,7 +35,7 @@ app.use(
     credentials: true,
     origin: [
       'http://localhost:5173',
-      'https://fabulous-scone-f7caa5.netlify.app',
+      'https://linfront.onrender.com',
     ],
   }),
 );
