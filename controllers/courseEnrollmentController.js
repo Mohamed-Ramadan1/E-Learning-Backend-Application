@@ -5,7 +5,7 @@ import Enroll from '../models/courseEnrollModel.js';
 import User from '../models/userModel.js';
 import Course from '../models/coursesModel.js';
 
-import { getAll, deleteOne } from './factoryHandler.js';
+import { deleteOne } from './factoryHandler.js';
 
 export const enrollOnCourse = catchAsync(async (req, res, next) => {
   const courseId = req.body.course;
