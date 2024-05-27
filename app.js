@@ -36,6 +36,7 @@ app.use(
     origin: [
       'http://localhost:5173',
       'https://linfront.onrender.com',
+      'https://elaborate-fox-9d3394.netlify.app',
     ],
   }),
 );
