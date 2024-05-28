@@ -55,7 +55,7 @@ app.use(express.json());
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  limit: 1500,
+  limit: 100000,
   standardHeaders: 'draft-7',
   legacyHeaders: false,
 });
