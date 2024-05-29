@@ -177,25 +177,29 @@ export const siteStatics = catchAsync(async (req, res, next) => {
   const unverifiedAccounts = await User.countDocuments({
     isVerified: false,
   });
+  const financialAidRequests = await FinancialAidRequests.countDocuments();
   const students = await User.countDocuments({ role: 'user' });
   const admins = await User.countDocuments({ role: 'admin' });
 
   res.status(200).json({
     status: 'success',
     data: {
-      users,
-      instructors,
-      enrollments,
-      reviews,
-      courses,
-      paidCourses,
-      freeCourses,
-      activeAccounts,
-      inactiveAccounts,
-      verifiedAccounts,
-      unverifiedAccounts,
-      students,
-      admins,
+      statics: {
+        users,
+        instructors,
+        enrollments,
+        reviews,
+        courses,
+        paidCourses,
+        freeCourses,
+        activeAccounts,
+        inactiveAccounts,
+        verifiedAccounts,
+        unverifiedAccounts,
+        students,
+        admins,
+        financialAidRequests,
+      },
     },
   });
 });

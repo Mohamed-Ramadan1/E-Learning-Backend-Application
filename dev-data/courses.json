@@ -33,7 +33,7 @@
     "averageRating": 4.5,
     "instructor": ["609c9f7743539a2f8c8b4567"],
     "category": "web development",
-    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/1_u6lrhj.jpg",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1716762795/x_qgqllf.png",
     "learningObjectives": [
       "Understand HTML",
       "Style with CSS",
@@ -69,13 +69,14 @@
     ],
     "price": 200,
     "discount": 50,
+    "duration": 70,
     "financialAid": false,
     "paymentModel": "paid",
     "totalReviews": 0,
     "averageRating": 4.7,
     "instructor": ["609c9f7743539a2f8c8b4568"],
     "category": "data science",
-    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/2_u6lrhj.jpg",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1716762795/x_qgqllf.png",
     "learningObjectives": [
       "Perform data analysis",
       "Build predictive models",
@@ -119,7 +120,7 @@
     "averageRating": 4.3,
     "instructor": ["609c9f7743539a2f8c8b4569"],
     "category": "graphic design",
-    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/3_u6lrhj.jpg",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1716762795/x_qgqllf.png",
     "learningObjectives": [
       "Understand design principles",
       "Use Adobe Photoshop",
@@ -162,7 +163,7 @@
     "averageRating": 4.6,
     "instructor": ["609c9f7743539a2f8c8b4570"],
     "category": "mobile development",
-    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/4_u6lrhj.jpg",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1716762795/x_qgqllf.png",
     "learningObjectives": [
       "Build mobile apps",
       "Understand Flutter framework",
@@ -171,6 +172,7 @@
     "skillLevel": "intermediate",
     "language": "english"
   },
+
   {
     "title": "Digital Marketing Strategies",
     "description": "Learn effective digital marketing strategies to grow your business.",
@@ -205,7 +207,7 @@
     "averageRating": 4.4,
     "instructor": ["609c9f7743539a2f8c8b4571"],
     "category": "marketing",
-    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/5_u6lrhj.jpg",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1716762795/x_qgqllf.png",
     "learningObjectives": [
       "Understand digital marketing",
       "Implement SEO strategies",
@@ -214,6 +216,7 @@
     "skillLevel": "beginner",
     "language": "english"
   },
+
   {
     "title": "Project Management Essentials",
     "description": "Master the fundamentals of project management.",
@@ -248,7 +251,7 @@
     "averageRating": 4.8,
     "instructor": ["609c9f7743539a2f8c8b4572"],
     "category": "project management",
-    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/6_u6lrhj.jpg",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1716762795/x_qgqllf.png",
     "learningObjectives": [
       "Plan projects",
       "Manage resources",
@@ -257,6 +260,7 @@
     "skillLevel": "intermediate",
     "language": "spanish"
   },
+
   {
     "title": "Accounting for Beginners",
     "description": "Learn the basics of accounting and financial management.",
@@ -291,7 +295,7 @@
     "averageRating": 4.2,
     "instructor": ["609c9f7743539a2f8c8b4573"],
     "category": "accounting",
-    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/7_u6lrhj.jpg",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1716762795/x_qgqllf.png",
     "learningObjectives": [
       "Understand accounting principles",
       "Prepare financial statements",
@@ -300,6 +304,7 @@
     "skillLevel": "beginner",
     "language": "french"
   },
+
   {
     "title": "Human Resources Management",
     "description": "Develop effective HR management skills.",
@@ -334,7 +339,7 @@
     "averageRating": 4.6,
     "instructor": ["609c9f7743539a2f8c8b4574"],
     "category": "human resources",
-    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/8_u6lrhj.jpg",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1716762795/x_qgqllf.png",
     "learningObjectives": [
       "Manage HR functions",
       "Develop recruitment strategies",
@@ -343,6 +348,7 @@
     "skillLevel": "intermediate",
     "language": "german"
   },
+
   {
     "title": "Sales Techniques and Strategies",
     "description": "Learn effective sales techniques to boost your career.",
@@ -377,7 +383,7 @@
     "averageRating": 4.4,
     "instructor": ["609c9f7743539a2f8c8b4575"],
     "category": "sales",
-    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/9_u6lrhj.jpg",
+     "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1716762795/x_qgqllf.png",
     "learningObjectives": [
       "Understand sales process",
       "Develop sales strategies",
@@ -386,6 +392,7 @@
     "skillLevel": "beginner",
     "language": "hindi"
   },
+
   {
     "title": "Operations Management",
     "description": "Optimize business operations and processes.",
@@ -420,7 +427,7 @@
     "averageRating": 4.7,
     "instructor": ["609c9f7743539a2f8c8b4576"],
     "category": "operations",
-    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/10_u6lrhj.jpg",
+     "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1716762795/x_qgqllf.png",
     "learningObjectives": [
       "Manage operations",
       "Improve processes",
@@ -429,6 +436,7 @@
     "skillLevel": "advanced",
     "language": "russian"
   },
+
   {
     "title": "Cybersecurity Fundamentals",
     "description": "Learn the basics of cybersecurity and how to protect systems from attacks.",
@@ -462,8 +470,8 @@
     "totalReviews": 0,
     "averageRating": 4.5,
     "instructor": ["609c9f7743539a2f8c8b4577"],
-    "category": "security",
-    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/11_u6lrhj.jpg",
+    "category": "data analysis",
+     "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1716762795/x_qgqllf.png",
     "learningObjectives": [
       "Understand cybersecurity principles",
       "Identify types of attacks",
@@ -472,6 +480,7 @@
     "skillLevel": "beginner",
     "language": "english"
   },
+
   {
     "title": "Advanced Python Programming",
     "description": "Enhance your Python programming skills with advanced concepts and techniques.",
@@ -506,7 +515,7 @@
     "averageRating": 4.6,
     "instructor": ["609c9f7743539a2f8c8b4578"],
     "category": "programming",
-    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1715258244/12_u6lrhj.jpg",
+    "photo": "https://res.cloudinary.com/dfjwny742/image/upload/v1716762795/x_qgqllf.png",
     "learningObjectives": [
       "Master advanced Python",
       "Use Python for data science",
