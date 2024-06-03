@@ -109,13 +109,27 @@ export const getEnrollmentsByUser = catchAsync(async (req, res, next) => {
     },
   });
 });
-//Logic  under review
-// export const updateEnrollment = updateOne(Booking);
 
-//TODO
+// admin routes
 
-/*
-1)Update enrollment
-2)Get all enrollments on course
-3)Get all enrollments by user
-*/
+//change enrollment status to approved
+export const approveEnrollment = catchAsync(async (req, res, next) => {
+  await Enroll.findByIdAndUpdate(req.params.id, {
+    enrollmentStatus: 'approved',
+  });
+  res.status(200).json({
+    status: 'success',
+    data: null,
+  });
+});
+
+//change enrollment status to cancelled
+export const cancelEnrollment = catchAsync(async (req, res, next) => {
+  await Enroll.findByIdAndUpdate(req.params.id, {
+    enrollmentStatus: 'cancelled',
+  });
+  res.status(200).json({
+    status: 'success',
+    data: null,
+  });
+});

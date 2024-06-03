@@ -11,6 +11,7 @@ import APIFeatures from '../utils/apiKeyFeatures.js';
 import cloudinary from 'cloudinary';
 import { promises as fs } from 'fs';
 import jwt from 'jsonwebtoken';
+import { getOne, createOne, updateOne } from './factoryHandler.js';
 
 import { createSendToken } from '../utils/tokenUtil.js';
 
@@ -22,6 +23,78 @@ const filterObj = (obj, ...allowedFields) => {
   });
   return newObj;
 };
+
+export const getAllUsers = catchAsync(async (req, res, next) => {
+  const features = new APIFeatures(User.find(), req.query)
+    .filter()
+    .sort()
+    .limitFields()
+    .paginate();
+
+  const users = await features.query;
+
+  res.status(200).json({
+    status: 'success',
+    results: users.length,
+    data: {
+      users,
+    },
+  });
+});
+
+export const getUser = getOne(User);
+
+export const createUser = createOne(User);
+
+export const updateUser = updateOne(User);
+
+export const deleteUser = catchAsync(async (req, res, next) => {
+  await User.findByIdAndDelete(req.params.id);
+  await Enroll.deleteMany({ user: req.params.id });
+  await Review.deleteMany({ user: req.params.id });
+  await Tasks.deleteMany({ createdBy: req.params.id });
+  await Blog.deleteMany({ createdBy: req.params.id });
+  await FinancialAidRequests.deleteMany({ user: req.params.id });
+  await UserCoursesNotes.deleteMany({ user: req.params.id });
+
+  res.status(204).json({
+    status: 'success',
+    data: null,
+  });
+});
+
+// unActivate user account
+
+export const unActivateUser = catchAsync(async (req, res, next) => {
+  await User.findByIdAndUpdate(req.params.id, { active: false });
+  res.status(200).json({
+    status: 'success',
+    data: null,
+  });
+});
+
+// Activate user account
+
+export const activateUser = catchAsync(async (req, res, next) => {
+  await User.findByIdAndUpdate(req.params.id, { active: true });
+  res.status(200).json({
+    status: 'success',
+    data: null,
+  });
+});
+
+// Verify user account
+
+export const verifyUser = catchAsync(async (req, res, next) => {
+  await User.findByIdAndUpdate(req.params.id, {
+    isVerified: true,
+    emailToken: null,
+  });
+  res.status(200).json({
+    status: 'success',
+    data: null,
+  });
+});
 
 export const updatePassword = catchAsync(async (req, res, next) => {
   const { passwordCurrent, password, passwordConfirm } = req.body;

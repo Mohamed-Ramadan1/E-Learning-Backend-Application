@@ -6,6 +6,8 @@ import {
   createCourse,
   updateCourse,
   deleteCourse,
+  freeCourses,
+  paidCourses,
 } from './../controllers/coursesController.js';
 import upload from './../middleware/multerMiddleware.js';
 import { protect, restrictTo } from '../middleware/authMiddleware.js';
@@ -15,6 +17,9 @@ router
   .get(getAllCourses)
   .post(protect, restrictTo('admin'), upload.single('photo'), createCourse);
 
+//Courses end points
+router.route('/free').get(freeCourses);
+router.route('/paid').get(paidCourses);
 router
   .route('/:id')
   .get(getCourse)

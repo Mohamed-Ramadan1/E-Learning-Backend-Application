@@ -8,9 +8,17 @@ import {
   getMyCourses,
   getMyTasks,
   getMyReviews,
+  getAllUsers,
+  createUser,
+  getUser,
+  deleteUser,
+  updateUser,
+  unActivateUser,
+  activateUser,
+  verifyUser,
 } from './../controllers/userController.js';
 
-import { protect } from './../middleware/authMiddleware.js';
+import { protect, restrictTo } from './../middleware/authMiddleware.js';
 import upload from './../middleware/multerMiddleware.js';
 const router = Router();
 
@@ -31,5 +39,15 @@ router.route('/me/courses').get(getMyCourses);
 router.route('/me/tasks').get(getMyTasks);
 
 router.route('/me/reviews').get(getMyReviews);
+
+router.use(restrictTo('admin'));
+//Users end points
+router.route('/').get(getAllUsers).post(createUser);
+
+router.route('/:id').get(getUser).delete(deleteUser).patch(updateUser);
+
+router.route('/:id/inactive').patch(unActivateUser);
+router.route('/:id/active').patch(activateUser);
+router.route('/:id/verify').patch(verifyUser);
 
 export default router;

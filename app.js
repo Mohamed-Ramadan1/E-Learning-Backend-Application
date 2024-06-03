@@ -13,11 +13,12 @@ import cors from 'cors';
 import userRouter from './routes/userRoute.js';
 import AdminRouter from './routes/adminRoute.js';
 import courseRouter from './routes/courseRoute.js';
-import enrollmentRouter from './routes/enrollmentRoute.js';
+import enrollmentRouter from './routes/courseEnrollmentRoute.js';
 import authRouter from './routes/authRoute.js';
 import reviewRoute from './routes/reviewRoute.js';
 import taskRouter from './routes/tasksRoute.js';
 import blogRouter from './routes/blogRoute.js';
+import instructorRouter from './routes/instructorRoute.js';
 import instructorApplicationsRouter from './routes/InstructorApplicationsRoute.js';
 import paymentRecordsRouter from './routes/paymentRecordsRoute.js';
 import financialAidRequestRouter from './routes/financialAidRoute.js';
@@ -71,11 +72,20 @@ app.use('/api/v1/enrolls', enrollmentRouter);
 app.use('/api/v1/reviews', reviewRoute);
 app.use('/api/v1/tasks', taskRouter);
 app.use('/api/v1/blogs', blogRouter);
+app.use('/api/v1/instructors', instructorRouter);
 app.use('/api/v1/instructorApplications', instructorApplicationsRouter);
 app.use('/api/v1/paymentRecords', paymentRecordsRouter);
 app.use('/api/v1/financialAidRequests', financialAidRequestRouter);
 app.use('/api/v1/userCoursesNotes', userCoursesNotesRouter);
 app.use('/api/v1/wishlist', wishlistRouter);
+
+// app.use('/', (req, res) => {
+//   res.status(200).json({
+//     status: 'success',
+//     message:
+//       'Welcome to the API service our API works you have to add (/api/v1/endPoints) to access the resources',
+//   });
+// });
 
 app.use('*', (req, res, next) => {
   next(new AppError(`Cant find ${req.originalUrl}  on this server!`));

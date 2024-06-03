@@ -24,7 +24,11 @@ export const getAllBlogs = catchAsync(async (req, res, next) => {
 });
 
 export const getBlog = catchAsync(async (req, res, next) => {
-  const blog = await Blog.findById(req.params.id);
+  const blog = await Blog.findOne({
+    _id: req.params.id,
+    published: true,
+    visibility: 'public',
+  });
   if (!blog) {
     return next(new AppError('No document found', 404));
   }
@@ -66,10 +70,13 @@ export const updateBlog = catchAsync(async (req, res, next) => {
 });
 
 export const deleteBlog = catchAsync(async (req, res, next) => {
-  await Blog.findOneAndDelete({
+  const blog = await Blog.findOneAndDelete({
     _id: req.params.id,
     createdBy: req.user.id,
   });
+  if (!blog) {
+    return next(new AppError('No document found', 404));
+  }
   res.status(204).json({
     status: 'success',
     data: null,
@@ -92,5 +99,57 @@ export const getMyBlogs = catchAsync(async (req, res, next) => {
     data: {
       blogs,
     },
+  });
+});
+
+//Blogs admin actions
+export const allBlogsPosts = catchAsync(async (req, res, next) => {
+  const blogs = await Blog.find();
+  res.status(200).json({
+    status: 'success',
+    results: blogs.length,
+    data: {
+      blogs,
+    },
+  });
+});
+
+export const blogPost = catchAsync(async (req, res, next) => {
+  const blog = await Blog.findById(req.params.id);
+  if (!blog) {
+    return next(new AppError('No document found', 404));
+  }
+  res.status(200).json({
+    status: 'success',
+    data: {
+      blog,
+    },
+  });
+});
+
+// publish a blog
+export const publishBlog = catchAsync(async (req, res, next) => {
+  await Blog.findByIdAndUpdate(req.params.id, { published: true });
+  res.status(200).json({
+    status: 'success',
+    data: null,
+  });
+});
+
+// unpublish a blog
+export const unPublishBlog = catchAsync(async (req, res, next) => {
+  await Blog.findByIdAndUpdate(req.params.id, { published: false });
+  res.status(200).json({
+    status: 'success',
+    data: null,
+  });
+});
+
+//delete a blog
+export const deleteBlogPost = catchAsync(async (req, res, next) => {
+  await Blog.findByIdAndDelete(req.params.id);
+  res.status(204).json({
+    status: 'success',
+    data: null,
   });
 });

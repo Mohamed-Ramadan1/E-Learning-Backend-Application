@@ -63,6 +63,9 @@ export const updateTask = catchAsync(async (req, res, next) => {
     { new: true, runValidators: true },
   );
 
+  if (!updatedTask) {
+    return next(new AppError('No document found', 404));
+  }
   res.status(200).json({
     status: 'success',
     data: {
@@ -72,11 +75,13 @@ export const updateTask = catchAsync(async (req, res, next) => {
 });
 
 export const deleteTask = catchAsync(async (req, res, next) => {
-  await Task.findOneAndDelete({
+  const deletedTask = await Task.findOneAndDelete({
     _id: req.params.id,
     createdBy: req.user.id,
   });
-
+  if (!deletedTask) {
+    return next(new AppError('No document found', 404));
+  }
   res.status(204).json({
     status: 'success',
     data: null,

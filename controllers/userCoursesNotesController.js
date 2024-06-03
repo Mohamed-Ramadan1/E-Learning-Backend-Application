@@ -46,17 +46,20 @@ export const getUserNote = catchAsync(async (req, res, next) => {
 });
 
 export const createUserNote = catchAsync(async (req, res, next) => {
-  // check if the course exists
-  // check if the user is enrolled in the course
-  // check if the user is the owner of the course
   const course = await Course.findById(req.body.course);
   const enroll = await Enroll.findOne({
     user: req.user._id,
     course: course._id,
   });
-  if (!course || !enroll) {
+  if (!course) {
+    return next(new AppError(`No course found with that id `, 404));
+  }
+  if (!enroll) {
     return next(
-      new AppError('Invalid data  please provide all required data', 400),
+      new AppError(
+        `You are not enrolled in this course, please enroll first`,
+        404,
+      ),
     );
   }
   const userNote = await UserCoursesNotes.create({
@@ -98,9 +101,11 @@ export const deleteUserNote = catchAsync(async (req, res, next) => {
     _id: req.params.id,
     user: req.user._id,
   });
+
   if (!userNote) {
     return next(new AppError(`No document found with that id `, 404));
   }
+
   res.status(204).json({
     status: 'success',
     data: null,

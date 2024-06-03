@@ -98,3 +98,47 @@ export const deleteCourse = catchAsync(async (req, res, next) => {
     data: null,
   });
 });
+
+// Get all free courses
+export const freeCourses = catchAsync(async (req, res, next) => {
+  const features = new APIFeatures(
+    Course.find({ paymentModel: 'free' }),
+    req.query,
+  )
+    .filter()
+    .sort()
+    .limitFields()
+    .paginate();
+
+  const courses = await features.query;
+
+  res.status(200).json({
+    status: 'success',
+    results: courses.length,
+    data: {
+      courses,
+    },
+  });
+});
+
+// Get all paid courses
+export const paidCourses = catchAsync(async (req, res, next) => {
+  const features = new APIFeatures(
+    Course.find({ paymentModel: 'paid' }),
+    req.query,
+  )
+    .filter()
+    .sort()
+    .limitFields()
+    .paginate();
+
+  const courses = await features.query;
+
+  res.status(200).json({
+    status: 'success',
+    results: courses.length,
+    data: {
+      courses,
+    },
+  });
+});

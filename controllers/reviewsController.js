@@ -58,6 +58,7 @@ export const getCourseReviews = catchAsync(async (req, res, next) => {
 
   res.status(200).json({
     status: 'success',
+    results: reviewsOnCourse.length,
     data: {
       reviews: reviewsOnCourse,
     },
