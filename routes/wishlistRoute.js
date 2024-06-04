@@ -18,7 +18,6 @@ router.route('/check').post(checkCourseInWishlist);
 
 router.route('/remove/:courseId').delete(removeItemFromWishlist);
 
-
 router.route('/:id').get(getWishlistItem).delete(deleteWishlistItem);
 
 export default router;

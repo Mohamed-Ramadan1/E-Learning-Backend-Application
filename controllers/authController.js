@@ -23,6 +23,7 @@ export const signup = catchAsync(async (req, res, next) => {
   createSendToken(newUser, 201, res);
 });
 
+
 export const verifyEmail = catchAsync(async (req, res, next) => {
   const emailToken = req.params.emailToken;
   console.log(emailToken);

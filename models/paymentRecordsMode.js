@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-// i want it contain first name ,last name ,email ,phone number ,address ,city ,state ,zip code ,card number ,card expiry date ,card cvv
+
 
 const paymentRecordsSchema = new mongoose.Schema(
   {

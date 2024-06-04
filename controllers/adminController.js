@@ -6,6 +6,10 @@ import Instructor from '../models/InstructorModel.js';
 import FinancialAidRequests from '../models/financialAidMode.js';
 import Course from '../models/coursesModel.js';
 
+
+
+
+
 // Site statics
 export const siteStatics = catchAsync(async (req, res, next) => {
   const users = await User.countDocuments();
@@ -48,4 +52,4 @@ export const siteStatics = catchAsync(async (req, res, next) => {
   });
 });
 
-// Control enrollments status
+

@@ -79,14 +79,6 @@ app.use('/api/v1/financialAidRequests', financialAidRequestRouter);
 app.use('/api/v1/userCoursesNotes', userCoursesNotesRouter);
 app.use('/api/v1/wishlist', wishlistRouter);
 
-// app.use('/', (req, res) => {
-//   res.status(200).json({
-//     status: 'success',
-//     message:
-//       'Welcome to the API service our API works you have to add (/api/v1/endPoints) to access the resources',
-//   });
-// });
-
 app.use('*', (req, res, next) => {
   next(new AppError(`Cant find ${req.originalUrl}  on this server!`));
 });
