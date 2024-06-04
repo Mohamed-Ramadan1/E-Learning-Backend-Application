@@ -2,6 +2,47 @@
 
 This project is a backend application for an E-Learning platform, built using Node.js, Express.js, JWT, and RESTful API principles. The application leverages MongoDB for the database, Multer for file handling, and Nodemailer for email functionalities. It features a fully functional authentication system using cookies and JWT.
 
+## API documentation
+
+https://documenter.getpostman.com/view/31297722/2sA3Qy6pbz
+
+## Hosted application
+
+https://e-learning-backend-application.onrender.com
+
+## Installation-locally
+
+clone the project to your machine with the following command
+
+1. git clone https://github.com/Mohamed-Ramadan1/E-Learning-Backend-Application
+2. navigate to the project
+3. run npm install
+
+## Very important note to be able to run the application
+
+the application has missing file (.env) file that contains important information without this data the project will not work
+
+1.  in root folder create (.env) file (use the exact name =.env)
+2.  add this variable to the file and add your own data
+    NODE_ENV=development
+    NODE_ENV=production
+    PORT=3000
+
+DATABASE= (your database)
+DATABASE_PASSWORD = (your database password)
+
+SECRET=(secret for JWT authentication encryption)
+JWT_EXPIRES_IN=90d
+JWT_EXPIRES_IN_LOGOUT=0s
+JWT_COOKIE_EXPIRES_IN=90
+
+cloudinary configuration
+CLOUD_NAME=()
+CLOUD_API_KEY=592256278369915
+CLOUD_API_SECRET=gTAYBtaSemj3NhhNPo8xfIa4m7g
+
+EMAIL_PASSWORD= ( your outlook email password )
+
 ## Features
 
 ### Courses
@@ -116,4 +157,6 @@ User Notes:
 
 User Wishlist:
 
-1. Add Courses: Users can add courses
+1. Add Courses: Users can add courses to the wishlist.
+
+2. Delete Courses: Users can delete their courses from the wishlist.
