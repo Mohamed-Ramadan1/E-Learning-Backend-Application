@@ -8,6 +8,9 @@ https://documenter.getpostman.com/view/31297722/2sA3Qy6pbz
 
 ## Hosted application
 
+to access resources add (/api/v1/resourcesName )
+example : https://e-learning-backend-application.onrender.com/api/v1/courses
+
 https://e-learning-backend-application.onrender.com
 
 ## Installation-locally
