@@ -4,7 +4,7 @@ This project is a backend application for an E-Learning platform, built using No
 
 ## API documentation
 
-https://documenter.getpostman.com/view/31297722/2sA3Qy6pbz
+https://documenter.getpostman.com/view/31297722/2sA3XJnRJd
 
 ## Hosted application
 

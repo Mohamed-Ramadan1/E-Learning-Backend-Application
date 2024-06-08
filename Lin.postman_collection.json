@@ -1,0 +1,3262 @@
+{
+	"info": {
+		"_postman_id": "4894885e-5d3d-4a11-8ef5-65d0611c8999",
+		"name": "Lin",
+		"description": "This project is a backend application for an E-Learning platform, built using Node.js, Express.js, JWT, and RESTful API principles. The application leverages MongoDB for the database, Multer for file handling, and Nodemailer for email functionalities. It features a fully functional authentication system using cookies and JWT.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31297722"
+	},
+	"item": [
+		{
+			"name": "Coursers",
+			"item": [
+				{
+					"name": "Admin-endPoints",
+					"item": [
+						{
+							"name": "Update Course",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"new name\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/courses/665e40fb8e4b15fb4c95eec7",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"courses",
+										"665e40fb8e4b15fb4c95eec7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Course",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/courses/665e40e08e4b15fb4c95eeb4",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"courses",
+										"665e40e08e4b15fb4c95eeb4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Course",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\n    \"title\": \"v  Programming\",\n    \"description\": \"Enhance your Python programming skills with advanced concepts and techniques.\",\n    \"duration\": 50,\n    \"videos\": [\n      {\n        \"title\": \"introduction\",\n        \"url\": \"https://youtu.be/X1ulCwyhCVM?si=WLAujxFeuPIogjs3\"\n      },\n      {\n        \"title\": \"first lesson\",\n        \"url\": \"https://youtu.be/89VLfs-wpEY?si=5In_MqMzq1k0M4jp\"\n      },\n      {\n        \"title\": \"Second lesson\",\n        \"url\": \"https://youtu.be/xkNpIsbxMuo?si=zJJh9lLsXkVKDjZ4\"\n      },\n      {\n        \"title\": \"thired lesson\",\n        \"url\": \"https://youtu.be/qh1QE23RQmQ?si=DXYQsWT4XBMKDVaX\"\n      },\n      {\n        \"title\": \"fourth lesson\",\n        \"url\": \"https://youtu.be/jfOfZfbNCsk?si=z7K_k40qamlySaXi\"\n      }\n    ],\n    \"price\": 180,\n    \"discount\": 30,\n    \"financialAid\": false,\n    \"paymentModel\": \"free\",\n    \"totalReviews\": 0,\n    \"averageRating\": 4.6,\n    \"instructor\": [\"609c9f7743539a2f8c8b4578\"],\n    \"category\": \"mobile development\",\n    \"photo\": \"https://res.cloudinary.com/dfjwny742/image/upload/v1716762795/x_qgqllf.png\",\n    \"learningObjectives\": [\n      \"Master advanced Python\",\n      \"Use Python for data science\",\n      \"Implement efficient algorithms\"\n    ],\n    \"skillLevel\": \"advanced\",\n    \"language\": \"english\"\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/courses",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"courses"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Users-endPoints",
+					"item": [
+						{
+							"name": "Get All Courses",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/courses",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"courses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Free Courses",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/courses/free",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"courses",
+										"free"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Course",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/courses/663cc42998e7aa0a4c099047",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"courses",
+										"663cc42998e7aa0a4c099047"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Paid Courses",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/courses/paid",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"courses",
+										"paid"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "User-endPoints",
+					"item": [
+						{
+							"name": "Get ME",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/users/me",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"users",
+										"me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Me",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/users/deleteMe",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"users",
+										"deleteMe"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update My Password",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"passwordCurrent\":\"123456789\",\r\n    \"password\":\"123456789\",\r\n    \"passwordConfirm\":\"123456789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/users/updatePassword",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"users",
+										"updatePassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update my info",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "king25@gmail.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "Mohamed Ramadan rl",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/home/mohamedramadan/Pictures/Screenshots/getmyBlogs.png",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/users/updateInfo",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"users",
+										"updateInfo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Un Activate My Account",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.environment.set(\"jwt\", pm.response.json().token);"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/users/unActivateMe",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"users",
+										"unActivateMe"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All My Courses",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/users/me/courses",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"users",
+										"me",
+										"courses"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "admin-endPoints",
+					"item": [
+						{
+							"name": "Get User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/users/665b2f0fd0ef105629b7c699",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"users",
+										"665b2f0fd0ef105629b7c699"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"kavin\",\r\n    \"email\":\"afd@gmail.com\",\r\n    \"password\":\"12345667\",\r\n    \"passwordConfirm\":\"12345667\",\r\n    \"role\":\"admin\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/users",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/users/665b2f0fd0ef105629b7c699",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"users",
+										"665b2f0fd0ef105629b7c699"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Users",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/users",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"admingy\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/users/6653bd0fd595774617fc7caf",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"users",
+										"6653bd0fd595774617fc7caf"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Un Active user account",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/users/6653bd0fd595774617fc7caf/inactive",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"users",
+										"6653bd0fd595774617fc7caf",
+										"inactive"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Active User Account",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/users/6653bd0fd595774617fc7caf/active",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"users",
+										"6653bd0fd595774617fc7caf",
+										"active"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Verifiay User Account",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/users/665e2cc7ac6edd572eafed31/verify",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"users",
+										"665e2cc7ac6edd572eafed31",
+										"verify"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Signup",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"jwt\", pm.response.json().token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"name\":\"Mohamed-Ramadan\",\r\n    \"email\":\"mohamedRamadanmeray@outlook.com\",\r\n    \"password\":\"123456789\",\r\n    \"passwordConfirm\":\"123456789\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/auth/signup",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"jwt\", pm.response.json().token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"email\":\"mohamedRamadanmeray@outlook.com\",\r\n    \"password\":\"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/auth/login",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"jwt\", pm.response.json().token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/auth/logout",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Virefication  email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"emailToken\": \"f22931ca7701a1ed23e1cb3fbc055d4daa96678d4cda27715e892f4a795e4c80c25a824c86439eb314f0bd5f34816a20f8db2ef5a2844e76e2de28379c6d1404\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/auth/verify-email",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"auth",
+								"verify-email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"email\":\"mohamedRamadanmeray@outlook.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/auth/forgotPassword",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"auth",
+								"forgotPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"jwt\", pm.response.json().token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"12345678\",\r\n    \"passwordConfirm\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/auth/resetPassword/279be69587f685cc347e576f43d970fbe4831300d2c1872d99b5b30f1d9e733d",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"auth",
+								"resetPassword",
+								"279be69587f685cc347e576f43d970fbe4831300d2c1872d99b5b30f1d9e733d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Courses-enrollmenst",
+			"item": [
+				{
+					"name": "Admin-endPoints",
+					"item": [
+						{
+							"name": "Delete Enrollment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/enrolls/665e5095da92730792f28b9a",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"enrolls",
+										"665e5095da92730792f28b9a"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Approve Enrollment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/enrolls/665e5095da92730792f28b9a/approve",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"enrolls",
+										"665e5095da92730792f28b9a",
+										"approve"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cancel Enrollment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/enrolls/665e5095da92730792f28b9a/cancel",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"enrolls",
+										"665e5095da92730792f28b9a",
+										"cancel"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Enrolled users On Course",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/enrolls/enrolledUsers/6655aa6bb41981daeccbd1a9",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"enrolls",
+										"enrolledUsers",
+										"6655aa6bb41981daeccbd1a9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Enrollments",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/enrolls",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"enrolls"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Enrollment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/enrolls/665e5095da92730792f28b9a",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"enrolls",
+										"665e5095da92730792f28b9a"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User-endPoints",
+					"item": [
+						{
+							"name": " Enroll On Course",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"course\":\"6655aa6bb41981daeccbd1a9\"\r\n    // \"user\":\"65fca379e5b5b47d14ce845b\"\r\n    //6602c3d337e969183280022b\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/enrolls",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"enrolls"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Reviews",
+			"item": [
+				{
+					"name": "Create Review",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"review\":\"You dont have any choise  your father is dead\",\r\n    // \"user\":\"65fca379e5b5b47d14ce845b\",\r\n    \"course\":\"6655aa6bb41981daeccbd1a9\",\r\n    \"rating\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/reviews",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Reviews",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/reviews",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get  Review",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/reviews/665e4a7a412a6b27f38d8178",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"reviews",
+								"665e4a7a412a6b27f38d8178"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Review",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/reviews/",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"reviews",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Review",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/reviews/665e4a7a412a6b27f38d8178",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"reviews",
+								"665e4a7a412a6b27f38d8178"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Reviews On Course",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"courseId\":\"65eb1aed4e3c1e41c25b52df\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/reviews/courseReviews/6655aa6bb41981daeccbd1a9",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"reviews",
+								"courseReviews",
+								"6655aa6bb41981daeccbd1a9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "Create Task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"you have to kill him\",\r\n    \"description\":\"\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/tasks",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get  All Tasks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/tasks",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Task ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/tasks/665e49750be43a449c3bc594",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"tasks",
+								"665e49750be43a449c3bc594"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"call him right now\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/tasks/665e49750be43a449c3bc594",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"tasks",
+								"665e49750be43a449c3bc594"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Tasl",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/tasks/665e49750be43a449c3bc594",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"tasks",
+								"665e49750be43a449c3bc594"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tasks Stats",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/tasks/stats",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"tasks",
+								"stats"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Site statics",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/admin/siteStatics",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"admin",
+								"siteStatics"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Blog",
+			"item": [
+				{
+					"name": "Admin-endPoints",
+					"item": [
+						{
+							"name": "Get All blogs",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/blogs/allBlogsPosts",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"blogs",
+										"allBlogsPosts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Un publish blog",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/blogs/6659d29b48c10a70a8cf7194/notPublished",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"blogs",
+										"6659d29b48c10a70a8cf7194",
+										"notPublished"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Publish Blog",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/blogs/6659d29b48c10a70a8cf7194/published",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"blogs",
+										"6659d29b48c10a70a8cf7194",
+										"published"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Blog Post",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/blogs/blogsPosts/6659d29b48c10a70a8cf7194",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"blogs",
+										"blogsPosts",
+										"6659d29b48c10a70a8cf7194"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Blog Post",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/blogs/blogsPosts/6659d29b48c10a70a8cf7194",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"blogs",
+										"blogsPosts",
+										"6659d29b48c10a70a8cf7194"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Users-endPoints",
+					"item": [
+						{
+							"name": "get All Blogs",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/blogs",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"blogs"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Blog",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/blogs/6659d2a348c10a70a8cf71a2",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"blogs",
+										"6659d2a348c10a70a8cf71a2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Blog",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"the power of you\",\n    \"content\":\" you have the power of mind dont west it\",\n    \"category\":\"web\"\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/blogs",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"blogs"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get My Blogs",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/blogs/myBlogs",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"blogs",
+										"myBlogs"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Blog",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\n    \"content\":\"fuc life\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/blogs/665e48ec40cea134514f5333",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"blogs",
+										"665e48ec40cea134514f5333"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Blog",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/blogs/665e48ec40cea134514f5333",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"blogs",
+										"665e48ec40cea134514f5333"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Become instructor Applications",
+			"item": [
+				{
+					"name": "Create New Instructor Application",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"sosj@example.com\",\n  \"description\": \"Highly motivated instructor with 5+ years of experience in teaching web development. Proven ability to create engaging learning experiences and help students achieve their goals.\",\n  \"phone\": \"+1234567890\",\n  \"address\": \"123 Main Street, Anytown, CA 12345\",\n  \"country\": \"USA\",\n  \"experience\": 6,\n  \"specialization\": \"Front-end Development\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/instructorApplications",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"instructorApplications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Applications",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/instructorApplications",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"instructorApplications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Application",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/instructorApplications/6639ce94ba219d4b1568dc6c",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"instructorApplications",
+								"6639ce94ba219d4b1568dc6c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Application",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" :\"fuc\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/instructorApplications/6639ce94ba219d4b1568dc6c",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"instructorApplications",
+								"6639ce94ba219d4b1568dc6c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Instructore application",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/instructorApplications/6639d0d63b294d823529895c",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"instructorApplications",
+								"6639d0d63b294d823529895c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Approve Instructor Application",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/instructorApplications/663a08aa37a674eb1f31f295/approve",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"instructorApplications",
+								"663a08aa37a674eb1f31f295",
+								"approve"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reject instructor application",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/instructorApplications/6639ce94ba219d4b1568dc6c/reject",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"instructorApplications",
+								"6639ce94ba219d4b1568dc6c",
+								"reject"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payments Records",
+			"item": [
+				{
+					"name": "Get all payment records",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/paymentRecords",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"paymentRecords"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create paymentRecord",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"course\":\"6655aa9496bbc8c10b0f800d\",\n  \"cardExpiryDate\": \"05/2024\",\n  \"cardNumber\":\"123456789\",\n   \"cardCvv\": \"123\", \n  \"paymentAmount\": 100\n  }\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/paymentRecords",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"paymentRecords"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Payment Record",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/paymentRecords/665e5095da92730792f28b97",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"paymentRecords",
+								"665e5095da92730792f28b97"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Payment Record",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/paymentRecords/665e5095da92730792f28b97",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"paymentRecords",
+								"665e5095da92730792f28b97"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Payment Record",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/paymentRecords/665e5095da92730792f28b97",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"paymentRecords",
+								"665e5095da92730792f28b97"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Financial Aid Requests",
+			"item": [
+				{
+					"name": "Users-endPoints",
+					"item": [
+						{
+							"name": "Create Financial aid request",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"age\":30,\n    \"courseId\":\"6655aae42e6275fb427b15f7\",\n    \"education\":\"high school\",\n    \"employmentStatus\":\"partTime\",\n    \"applymentReason\":\"i hope to improve my skills vi taking this advanced course\"\n\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/financialAidRequests",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"financialAidRequests"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get financial aid application",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/financialAidRequests/664bb878a2284fbe67b1395e",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"financialAidRequests",
+										"664bb878a2284fbe67b1395e"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Financial aid application",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"age\":33}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/financialAidRequests/665f049c59bf22dbc320162f",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"financialAidRequests",
+										"665f049c59bf22dbc320162f"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete financial aid application ",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/financialAidRequests/665f049c59bf22dbc320162f",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"financialAidRequests",
+										"665f049c59bf22dbc320162f"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Admin-endPoints",
+					"item": [
+						{
+							"name": "Approve Financial aid request",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/financialAidRequests/665f053fe1061151dd63562d/approve",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"financialAidRequests",
+										"665f053fe1061151dd63562d",
+										"approve"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Financial aid request ",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/financialAidRequests/request/665f0550e1061151dd635647",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"financialAidRequests",
+										"request",
+										"665f0550e1061151dd635647"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all Financial Requests",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/financialAidRequests/allRequests",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"financialAidRequests",
+										"allRequests"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Financial aid request",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/financialAidRequests/deleteRequest/665f0550e1061151dd635647",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"financialAidRequests",
+										"deleteRequest",
+										"665f0550e1061151dd635647"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Reject Financial Aid Request",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/financialAidRequests/665f0550e1061151dd635647/reject",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"financialAidRequests",
+										"665f0550e1061151dd635647",
+										"reject"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User Courses Notes",
+			"item": [
+				{
+					"name": "Get All user notes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/userCoursesNotes",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"userCoursesNotes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create user note",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"course\":\"6655aa6bb41981daeccbd1a9\",\n    \"title\":\"the hope \",\n    \"description\":\"final get it \"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/userCoursesNotes",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"userCoursesNotes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user note",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/userCoursesNotes/665e4e7e3d137ff61b0c7aff",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"userCoursesNotes",
+								"665e4e7e3d137ff61b0c7aff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user note",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\":\"legond\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/userCoursesNotes/665e4e7e3d137ff61b0c7aff",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"userCoursesNotes",
+								"665e4e7e3d137ff61b0c7aff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user note",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/userCoursesNotes/665e4f253d137ff61b0c7b1d",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"userCoursesNotes",
+								"665e4f253d137ff61b0c7b1d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Wishlist",
+			"item": [
+				{
+					"name": "Get All wishlist  items",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/wishlist",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"wishlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Wishlist item",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"course\":\"6655aa9496bbc8c10b0f800d\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/wishlist",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"wishlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get wishlist item",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/wishlist/665e4cf33ead7365ea26d2ed",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"wishlist",
+								"665e4cf33ead7365ea26d2ed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete wishlist item",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/wishlist/665e4cf33ead7365ea26d2ed",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"wishlist",
+								"665e4cf33ead7365ea26d2ed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Is course in user wichlist",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"courseId\":\"6655aabbd65becc729e51aaf\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/wishlist/check",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"wishlist",
+								"check"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove which list item ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/wishlist/remove/665e4cf33ead7365ea26d2ed",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"wishlist",
+								"remove",
+								"665e4cf33ead7365ea26d2ed"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Instructores",
+			"item": [
+				{
+					"name": "Create Instructore",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"fahd\",\n    \"email\":\"sdfssafafd@gmail.com\",\n    \"description\":\"on of the most powerfull instructore on the earth\",\n    \"specialization\":\"web dev fuc\" ,\n    \"experience\":5\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/instructors",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"instructors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Instructors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/instructors",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"instructors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Instructor ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/admin/getInstructor/6634aaa904d3d167c4a5f8e8",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"admin",
+								"getInstructor",
+								"6634aaa904d3d167c4a5f8e8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Instructor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/instructors/665e3e143c6c314a592cd117",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"instructors",
+								"665e3e143c6c314a592cd117"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Active Instructor account",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/instructors/665e3e143c6c314a592cd117/active",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"instructors",
+								"665e3e143c6c314a592cd117",
+								"active"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "dis Active Instructor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/instructors/665e3e143c6c314a592cd117/inactive",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"instructors",
+								"665e3e143c6c314a592cd117",
+								"inactive"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Instructor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"migan martil\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/instructors/665e3e143c6c314a592cd117",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"instructors",
+								"665e3e143c6c314a592cd117"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
